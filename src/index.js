@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './assets/index.css';
+import App from './pages/App';
 import reportWebVitals from './reportWebVitals';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    hola mundo en react
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
