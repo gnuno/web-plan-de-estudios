@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 import ReactFlow, { MiniMap, Controls, Background } from "react-flow-renderer";
 
-import initialElements from "../components/atoms/initialElements/initial-elements";
-import MultipleConnectionNode from "../components/atoms/multipleConnectionNode/MultipleConnectionNode";
+import initialElements from "../atoms/initialElements/initial-elements";
+import MultipleConnectionNode from "../atoms/multipleConnectionNode/MultipleConnectionNode";
 
 const nodeTypes = {
   multipleNode: MultipleConnectionNode,

@@ -1,5 +1,5 @@
 import React from "react";
-import {nodeStyles, NodeLabel} from './initial-elements.utils'
+import { nodeStyles, NodeLabel } from './initial-elements.utils'
 
 const styles = nodeStyles()
 const fullWidthNodeStyles = nodeStyles('350px')
@@ -11,26 +11,26 @@ const initialElements = [
     targetPosition: "left",
     data: {
       label: (
-				<NodeLabel title="Algebra y Geometría Analítica" subtitle="1° Año"/>
+        <NodeLabel title="Algebra y Geometría Analítica" subtitle="1° Año" />
       ),
     },
     position: { x: -50, y: 150 },
   },
   {
     id: "2",
-		type: 'multipleNode',
+    type: 'multipleNode',
     sourcePosition: "right",
     targetPosition: "left",
     data: {
-			sources: [
-				{id: 'a', style: {top: 10}},
-				{id: 'b', style: {top: 40}}
-			],
+      sources: [
+        { id: 'a', style: { top: 10 } },
+        { id: 'b', style: { top: 40 } }
+      ],
       label: (
-				<NodeLabel title="Análisis Matemático I" subtitle="2° Año"/>
+        <NodeLabel title="Análisis Matemático I" subtitle="2° Año" />
       ),
     },
-		style: styles,
+    style: styles,
     position: { x: 350, y: 125 },
   },
   {
@@ -39,31 +39,31 @@ const initialElements = [
     targetPosition: "left",
     data: {
       label: (
-				<NodeLabel title="Probabilidad y Estadística" subtitle="2° Año"/>
+        <NodeLabel title="Probabilidad y Estadística" subtitle="2° Año" />
       ),
     },
     position: { x: 575, y: 75 },
   },
   {
     id: "4",
-		type: 'multipleNode',
+    type: 'multipleNode',
     sourcePosition: "right",
     targetPosition: "left",
     data: {
-			targets: [
-				{id: 'a', style: {top: 10}},
-				{id: 'b', style: {top: 40}}
-			],
-			sources: [
-				{id: 'a', style: {top: 10}},
-				{id: 'b', style: {top: 40}}
-			],
+      targets: [
+        { id: 'a', style: { top: 10 } },
+        { id: 'b', style: { top: 40 } }
+      ],
+      sources: [
+        { id: 'a', style: { top: 10 } },
+        { id: 'b', style: { top: 40 } }
+      ],
       label: (
-				<NodeLabel title="Análisis Matemático II" subtitle="3° Año"/>
+        <NodeLabel title="Análisis Matemático II" subtitle="3° Año" />
       ),
     },
-		style: styles,
-		position: { x: 850, y: 110 },
+    style: styles,
+    position: { x: 850, y: 110 },
   },
   {
     id: "5",
@@ -71,7 +71,7 @@ const initialElements = [
     targetPosition: "left",
     data: {
       label: (
-				<NodeLabel title="Matemática Aplicada" subtitle="3° Año"/>
+        <NodeLabel title="Matemática Aplicada" subtitle="3° Año" />
       ),
     },
     position: { x: 1050, y: 150 },
@@ -82,7 +82,7 @@ const initialElements = [
     targetPosition: "left",
     data: {
       label: (
-				<NodeLabel title="Modelos, Simulación y Teoría de la Decisión" subtitle="4° Año"/>
+        <NodeLabel title="Modelos, Simulación y Teoría de la Decisión" subtitle="4° Año" />
       ),
     },
     position: { x: 1250, y: 75 },
@@ -93,7 +93,7 @@ const initialElements = [
     targetPosition: "left",
     data: {
       label: (
-				<NodeLabel title="Tecnología Aplicada" subtitle="1° Año"/>
+        <NodeLabel title="Tecnología Aplicada" subtitle="1° Año" />
       ),
     },
     position: { x: -50, y: 300 },
@@ -113,7 +113,7 @@ const initialElements = [
         { id: "c", position: "bottom" },
       ],
       label: (
-				<NodeLabel title="Arquitectura de Computadores I" subtitle="1° Año"/>
+        <NodeLabel title="Arquitectura de Computadores I" subtitle="1° Año" />
       ),
     },
     style: styles,
@@ -137,7 +137,7 @@ const initialElements = [
         },
       ],
       label: (
-				<NodeLabel title="Arquitectura de Computadores II" subtitle="2° Año"/>
+        <NodeLabel title="Arquitectura de Computadores II" subtitle="2° Año" />
       ),
     },
     style: styles,
@@ -155,7 +155,7 @@ const initialElements = [
         { id: "c", style: { top: 25 } },
       ],
       label: (
-				<NodeLabel title="Sistemas Operativos I" subtitle="2° Año"/>
+        <NodeLabel title="Sistemas Operativos I" subtitle="2° Año" />
       ),
     },
     style: styles,
@@ -167,7 +167,7 @@ const initialElements = [
     targetPosition: "left",
     data: {
       label: (
-				<NodeLabel title="Comunicación y Redes I" subtitle="2° Año"/>
+        <NodeLabel title="Comunicación y Redes I" subtitle="2° Año" />
       ),
     },
     position: { x: 575, y: 225 },
@@ -187,7 +187,7 @@ const initialElements = [
         },
       ],
       label: (
-				<NodeLabel title="Comunicación y Redes II" subtitle="3° Año"/>
+        <NodeLabel title="Comunicación y Redes II" subtitle="3° Año" />
       ),
     },
     style: styles,
@@ -204,7 +204,7 @@ const initialElements = [
         { id: "b", style: { top: 40 } },
       ],
       label: (
-				<NodeLabel title="Taller de Redes" subtitle="3° Año"/>
+        <NodeLabel title="Taller de Redes" subtitle="3° Año" />
       ),
     },
     style: styles,
@@ -230,7 +230,7 @@ const initialElements = [
         { id: "b", style: { top: 40 } },
       ],
       label: (
-				<NodeLabel title="Sistemas Operativos II" subtitle="3° Año"/>
+        <NodeLabel title="Sistemas Operativos II" subtitle="3° Año" />
       ),
     },
     style: styles,
@@ -242,7 +242,7 @@ const initialElements = [
     targetPosition: "left",
     data: {
       label: (
-				<NodeLabel title="Sistemas de Tiempo Real y Misión Crítica" subtitle="5° Año"/>
+        <NodeLabel title="Sistemas de Tiempo Real y Misión Crítica" subtitle="5° Año" />
       ),
     },
     position: { x: 1650, y: 350 },
@@ -258,7 +258,7 @@ const initialElements = [
         { id: "b", style: { top: 45 }, position: "left" },
       ],
       label: (
-				<NodeLabel title="Infraestructura de Sistemas" subtitle="4° Año"/>
+        <NodeLabel title="Infraestructura de Sistemas" subtitle="4° Año" />
       ),
     },
     style: styles,
@@ -276,7 +276,7 @@ const initialElements = [
         { id: "c", style: { top: 40 }, position: "right" },
       ],
       label: (
-				<NodeLabel title="Algoritmos y Estructura de Datos" subtitle="1° Año"/>
+        <NodeLabel title="Algoritmos y Estructura de Datos" subtitle="1° Año" />
       ),
     },
     style: styles,
@@ -288,7 +288,7 @@ const initialElements = [
     targetPosition: "left",
     data: {
       label: (
-				<NodeLabel title="Programación Orientada a Objetos I" subtitle="1° Año"/>
+        <NodeLabel title="Programación Orientada a Objetos I" subtitle="1° Año" />
       ),
     },
     position: { x: 180, y: 500 },
@@ -304,7 +304,7 @@ const initialElements = [
         { id: "b", style: { top: 40 } },
       ],
       label: (
-				<NodeLabel title="Programación Orientada a Objetos II" subtitle="2° Año"/>
+        <NodeLabel title="Programación Orientada a Objetos II" subtitle="2° Año" />
       ),
     },
     style: styles,
@@ -316,7 +316,7 @@ const initialElements = [
     targetPosition: "left",
     data: {
       label: (
-				<NodeLabel title="Interfaces de Usuario y Tecnologías Web" subtitle="3° Año"/>
+        <NodeLabel title="Interfaces de Usuario y Tecnologías Web" subtitle="3° Año" />
       ),
     },
     position: { x: 825, y: 475 },
@@ -327,7 +327,7 @@ const initialElements = [
     targetPosition: "left",
     data: {
       label: (
-				<NodeLabel title="Teoría de Sistemas y Organizaciones" subtitle="1° Año"/>
+        <NodeLabel title="Teoría de Sistemas y Organizaciones" subtitle="1° Año" />
       ),
     },
     position: { x: 160, y: 625 },
@@ -343,7 +343,7 @@ const initialElements = [
         { id: "b", style: { top: 40 }, position: "left" },
       ],
       label: (
-				<NodeLabel title="Ingeniería de Software I" subtitle="2° Año"/>
+        <NodeLabel title="Ingeniería de Software I" subtitle="2° Año" />
       ),
     },
     style: styles,
@@ -360,7 +360,7 @@ const initialElements = [
         { id: "b", style: { top: 40 } },
       ],
       label: (
-				<NodeLabel title="Matemática Discreta" subtitle="1° Año"/>
+        <NodeLabel title="Matemática Discreta" subtitle="1° Año" />
       ),
     },
     style: styles,
@@ -377,7 +377,7 @@ const initialElements = [
         { id: "b", style: { top: 40 } },
       ],
       label: (
-				<NodeLabel title="Base de Datos I" subtitle="2° Año"/>
+        <NodeLabel title="Base de Datos I" subtitle="2° Año" />
       ),
     },
     style: styles,
@@ -394,7 +394,7 @@ const initialElements = [
         { id: "b", style: { top: 40 } },
       ],
       label: (
-				<NodeLabel title="Lenguajes Formales" subtitle="2° Año"/>
+        <NodeLabel title="Lenguajes Formales" subtitle="2° Año" />
       ),
     },
     style: styles,
@@ -416,7 +416,7 @@ const initialElements = [
         { id: "b", style: { top: 40 } },
       ],
       label: (
-				<NodeLabel title="Base de Datos II" subtitle="3° Año"/>
+        <NodeLabel title="Base de Datos II" subtitle="3° Año" />
       ),
     },
     style: styles,
@@ -435,7 +435,7 @@ const initialElements = [
         { id: "d", style: { top: 40 } },
       ],
       label: (
-				<NodeLabel title="Ingeniería de Software II" subtitle="3° Año"/>
+        <NodeLabel title="Ingeniería de Software II" subtitle="3° Año" />
       ),
     },
     style: styles,
@@ -459,7 +459,7 @@ const initialElements = [
         { id: "d", style: { top: 40 } },
       ],
       label: (
-				<NodeLabel title="Programación Orientada a Objetos III" subtitle="3° Año"/>
+        <NodeLabel title="Programación Orientada a Objetos III" subtitle="3° Año" />
       ),
     },
     style: styles,
@@ -471,7 +471,7 @@ const initialElements = [
     targetPosition: "left",
     data: {
       label: (
-				<NodeLabel title="Explotación de Datos" subtitle="3° Año"/>
+        <NodeLabel title="Explotación de Datos" subtitle="3° Año" />
       ),
     },
     position: { x: 1050, y: 650 },
@@ -482,7 +482,7 @@ const initialElements = [
     targetPosition: "left",
     data: {
       label: (
-				<NodeLabel title="Dirección y Evaluación de Proyectos Informáticos" subtitle="4° Año"/>
+        <NodeLabel title="Dirección y Evaluación de Proyectos Informáticos" subtitle="4° Año" />
       ),
     },
     position: { x: 1260, y: 725 },
@@ -498,7 +498,7 @@ const initialElements = [
         { id: "b", style: { top: 40 } },
       ],
       label: (
-				<NodeLabel title="Arquitectura de Software" subtitle="4° Año"/>
+        <NodeLabel title="Arquitectura de Software" subtitle="4° Año" />
       ),
     },
     style: styles,
@@ -515,7 +515,7 @@ const initialElements = [
         { id: "b", style: { top: 40 } },
       ],
       label: (
-				<NodeLabel title="Metodología de la Investigación" subtitle="4° Año"/>
+        <NodeLabel title="Metodología de la Investigación" subtitle="4° Año" />
       ),
     },
     style: styles,
@@ -532,7 +532,7 @@ const initialElements = [
         { id: "b", style: { top: 40 } },
       ],
       label: (
-				<NodeLabel title="Paradigmas de Programación" subtitle="4° Año"/>
+        <NodeLabel title="Paradigmas de Programación" subtitle="4° Año" />
       ),
     },
     style: styles,
@@ -549,7 +549,7 @@ const initialElements = [
         { id: "b", style: { top: 40 } },
       ],
       label: (
-        <NodeLabel title="Lenguajes de Programación" subtitle="4° Año"/>
+        <NodeLabel title="Lenguajes de Programación" subtitle="4° Año" />
       ),
     },
     style: styles,
@@ -561,7 +561,7 @@ const initialElements = [
     targetPosition: "left",
     data: {
       label: (
-        <NodeLabel title="Desarrollo de Compiladores" subtitle="4° Año"/>
+        <NodeLabel title="Desarrollo de Compiladores" subtitle="4° Año" />
       ),
     },
     position: { x: 1455, y: 375 },
@@ -572,7 +572,7 @@ const initialElements = [
     targetPosition: "left",
     data: {
       label: (
-        <NodeLabel title="Inteligencia Artificial" subtitle="4° Año"/>
+        <NodeLabel title="Inteligencia Artificial" subtitle="4° Año" />
       ),
     },
     position: { x: 1455, y: 575 },
@@ -590,7 +590,7 @@ const initialElements = [
         { id: "d", style: { top: 40 } },
       ],
       label: (
-        <NodeLabel title="Práctica Profesional" subtitle="4° Año"/>
+        <NodeLabel title="Práctica Profesional" subtitle="4° Año" />
       ),
     },
     style: styles,
@@ -602,7 +602,7 @@ const initialElements = [
     targetPosition: "left",
     data: {
       label: (
-        <NodeLabel title="Optativa I" subtitle="5° Año"/>
+        <NodeLabel title="Optativa I" subtitle="5° Año" />
       ),
     },
     position: { x: 1650, y: 100 },
@@ -613,7 +613,7 @@ const initialElements = [
     targetPosition: "left",
     data: {
       label: (
-        <NodeLabel title="Aspectos Legales y Sociales de la Informática" subtitle="5° Año"/>
+        <NodeLabel title="Aspectos Legales y Sociales de la Informática" subtitle="5° Año" />
       ),
     },
     position: { x: 1650, y: 200 },
@@ -624,7 +624,7 @@ const initialElements = [
     targetPosition: "left",
     data: {
       label: (
-        <NodeLabel title="Ingeniería de Software III" subtitle="5° Año"/>
+        <NodeLabel title="Ingeniería de Software III" subtitle="5° Año" />
       ),
     },
     position: { x: 1650, y: 725 },
@@ -635,7 +635,7 @@ const initialElements = [
     targetPosition: "left",
     data: {
       label: (
-        <NodeLabel title="Economía I" subtitle="5° Año"/>
+        <NodeLabel title="Economía I" subtitle="5° Año" />
       ),
     },
     position: { x: 1650, y: 525 },
@@ -646,7 +646,7 @@ const initialElements = [
     targetPosition: "left",
     data: {
       label: (
-        <NodeLabel title="Optativa II" subtitle="5° Año"/>
+        <NodeLabel title="Optativa II" subtitle="5° Año" />
       ),
     },
     position: { x: 1850, y: 100 },
@@ -663,7 +663,7 @@ const initialElements = [
         { id: "c", style: { top: 40 } },
       ],
       label: (
-        <NodeLabel title="Seguridad y Auditoría" subtitle="5° Año"/>
+        <NodeLabel title="Seguridad y Auditoría" subtitle="5° Año" />
       ),
     },
     style: styles,
@@ -681,7 +681,7 @@ const initialElements = [
         { id: "c", style: { top: 40 } },
       ],
       label: (
-        <NodeLabel title="Teoría de la Computación" subtitle="5° Año"/>
+        <NodeLabel title="Teoría de la Computación" subtitle="5° Año" />
       ),
     },
     style: styles,
@@ -693,7 +693,7 @@ const initialElements = [
     targetPosition: "left",
     data: {
       label: (
-        <NodeLabel title="Administración y Gestión de las Organizaciones" subtitle="5° Año"/>
+        <NodeLabel title="Administración y Gestión de las Organizaciones" subtitle="5° Año" />
       ),
     },
     position: { x: 1850, y: 700 },
@@ -704,7 +704,7 @@ const initialElements = [
     targetPosition: "left",
     data: {
       label: (
-        <NodeLabel title="Economía II" subtitle="5° Año"/>
+        <NodeLabel title="Economía II" subtitle="5° Año" />
       ),
     },
     position: { x: 1850, y: 525 },
@@ -720,7 +720,7 @@ const initialElements = [
         { id: "b", style: { top: 40 } },
       ],
       label: (
-        <NodeLabel title="Trabajo Final" subtitle="5° Año"/>
+        <NodeLabel title="Trabajo Final" subtitle="5° Año" />
       ),
     },
     style: fullWidthNodeStyles,
@@ -732,7 +732,7 @@ const initialElements = [
     targetPosition: "left",
     data: {
       label: (
-        <NodeLabel title="Electiva" subtitle="2° Año"/>
+        <NodeLabel title="Electiva" subtitle="2° Año" />
       ),
     },
     position: { x: 380, y: 190 },
@@ -743,7 +743,7 @@ const initialElements = [
     targetPosition: "left",
     data: {
       label: (
-        <NodeLabel title="Universidad, Ciencia y Sociedad" subtitle="2° Año"/>
+        <NodeLabel title="Universidad, Ciencia y Sociedad" subtitle="2° Año" />
       ),
     },
     position: { x: 575, y: 780 },
@@ -754,7 +754,7 @@ const initialElements = [
     targetPosition: "left",
     data: {
       label: (
-        <NodeLabel title="Problemática Regional" subtitle="1° Año"/>
+        <NodeLabel title="Problemática Regional" subtitle="1° Año" />
       ),
     },
     position: { x: 160, y: 780 },
@@ -765,7 +765,7 @@ const initialElements = [
     targetPosition: "left",
     data: {
       label: (
-        <NodeLabel title="Análisis y Producción del Discurso" subtitle="1° Año"/>
+        <NodeLabel title="Análisis y Producción del Discurso" subtitle="1° Año" />
       ),
     },
     position: { x: -50, y: 400 },
@@ -776,7 +776,7 @@ const initialElements = [
     targetPosition: "left",
     data: {
       label: (
-        <NodeLabel title="Trabajo Social Obligatorio" subtitle="3° Año"/>
+        <NodeLabel title="Trabajo Social Obligatorio" subtitle="3° Año" />
       ),
     },
     position: { x: 1050, y: 780 },
@@ -787,7 +787,7 @@ const initialElements = [
     targetPosition: "left",
     data: {
       label: (
-        <NodeLabel title="Inglés I"/>
+        <NodeLabel title="Inglés I" />
       ),
     },
     position: { x: 575, y: 875 },
@@ -798,7 +798,7 @@ const initialElements = [
     targetPosition: "left",
     data: {
       label: (
-        <NodeLabel title="Inglés II"/>
+        <NodeLabel title="Inglés II" />
       ),
     },
     position: { x: 1050, y: 850 },
@@ -815,21 +815,21 @@ const initialElements = [
     id: "e3-4a",
     source: "3",
     target: "4",
-		targetHandle: 'a',
+    targetHandle: 'a',
     type: "smoothstep",
   },
   {
     id: "e4b-5",
     source: "4",
     target: "5",
-		sourceHandle: 'b',
+    sourceHandle: 'b',
     type: "smoothstep",
   },
   {
     id: "e4a-6",
     source: "4",
     target: "6",
-		sourceHandle: 'a',
+    sourceHandle: 'a',
     type: "smoothstep",
   },
   {
