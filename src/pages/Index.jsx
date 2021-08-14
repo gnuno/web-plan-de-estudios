@@ -1,5 +1,14 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { Container } from "../components/atoms/Container";
+
+const Body = styled.main`
+    width: 100%;
+    background: var(--softBlack);
+    font-size: var(--p1);
+`;
+
 
 export default function Index() {
   const careers = [
@@ -13,8 +22,14 @@ export default function Index() {
   ]
 
   return (
-    careers.map(c =>
-      <Link to={'/carrera' + c.path}> {c.name} </Link>
-    )
+    <Body>
+      <Container>
+        {
+          careers.map(c =>
+            <Link to={'/carrera' + c.path} key= {c.path}> {c.name} </Link>
+          )
+        }
+      </Container>
+    </Body>
   );
 };

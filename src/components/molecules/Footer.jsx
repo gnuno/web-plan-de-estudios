@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import styled from "styled-components";
 
 const Foot = styled.footer`
@@ -10,6 +10,8 @@ const Foot = styled.footer`
     bottom: 0px;
     position: absolute;
     width: 100%;
+    font-size: var(--p1);
+    i{ color: var(--red) }
     span{ margin-left: 3px }
 `;
 
