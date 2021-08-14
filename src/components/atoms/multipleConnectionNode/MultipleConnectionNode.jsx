@@ -13,6 +13,7 @@ export default memo(({ data }) => {
             id={id}
             style={style}
             isConnectable={false}
+            key={id}
           />
         ))
       ) : (
@@ -27,6 +28,7 @@ export default memo(({ data }) => {
             id={id}
             style={style}
             isConnectable={false}
+            key={id}
           />
         ))
       ) : (

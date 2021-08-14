@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from "react-router";
-import OverviewFlow from '../components/organisms/OverviewFlow'
+import OverviewFlow from '../components/organisms/OverviewFlow';
 
 export default function Career() {
   const { name } = useParams();

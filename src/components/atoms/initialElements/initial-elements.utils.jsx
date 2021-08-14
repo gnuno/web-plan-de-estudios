@@ -1,22 +1,30 @@
 import React from 'react'
+import styled from "styled-components";
 
-export const nodeStyles = (width = '150px') => {
+export const nodeStyles = (width = '175px') => {
   return {
-    border: "1px solid #000",
-    borderRadius: "3px",
-    padding: 10,
+    border: "1px solid var(--softBlack)",
+    borderRadius: "8px",
+    padding: '10px',
     fontSize: "12px",
-    backgroundColor: "#FFF",
+    backgroundColor: "var(--softWhite)",
     width,
-    textAlign: 'center'
+    textAlign: 'center',
   }
 }
 
+const Node = styled.div`
+  height: 35px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+`;
+
 export const NodeLabel = ({ title, subtitle }) => {
   return (
-    <>
+    <Node>
       <h4 style={{ margin: 0 }}>{title}</h4>
-      <i>{subtitle}</i>
-    </>
+      {subtitle? <i>{subtitle}</i> : "" }
+    </Node>
   )
 }

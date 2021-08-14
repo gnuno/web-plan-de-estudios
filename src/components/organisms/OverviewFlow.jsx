@@ -21,10 +21,9 @@ const OverviewFlow = () => {
     <ReactFlow
       elements={elements}
       onLoad={onLoad}
-      snapToGrid={true}
-      snapGrid={[15, 15]}
-      style={{ height: "100vh" }}
+      style={{ height: "90vh" }}
       nodesConnectable={false}
+      nodesDraggable={false}
       nodeTypes={nodeTypes}
     >
       <MiniMap
@@ -43,8 +42,8 @@ const OverviewFlow = () => {
         }}
         nodeBorderRadius={2}
       />
+      <Background variant="lines" color="var(--red)" gap={200}/>
       <Controls />
-      <Background color="#aaa" gap={16} />
     </ReactFlow>
   );
 };
