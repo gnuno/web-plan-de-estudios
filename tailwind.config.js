@@ -3,7 +3,11 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        'custom': '0px 0px 5px 0px #00000096',
+      },
+    },
   },
   plugins: [require("@tailwindcss/typography"),require("daisyui")],
   daisyui: {

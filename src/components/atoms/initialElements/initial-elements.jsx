@@ -11,16 +11,17 @@ const orientationRTL = {
 
 const base = {
   ...orientationRTL,
+  type: "special",
   style: styles,
 }
 
 const multiNodeBase = {
   ...base,
-  type: 'multipleNode'
+  type: "special"
 }
 
 
-const initialElements = [
+const materiasDeInformatica = [
   {
     id: "1",
     ...base,
@@ -29,7 +30,7 @@ const initialElements = [
         <NodeLabel title="Algebra y Geometría Analítica" subtitle="1° Año" />
       ),
     },
-    position: { x: -50, y: 150 },
+    position: { x: -400, y: 75 },
   },
   {
     id: "2",
@@ -43,7 +44,7 @@ const initialElements = [
         <NodeLabel title="Análisis Matemático I" subtitle="2° Año" />
       ),
     },
-    position: { x: 350, y: 125 },
+    position: { x: 50, y: 75 },
   },
   {
     id: "3",
@@ -53,7 +54,7 @@ const initialElements = [
         <NodeLabel title="Probabilidad y Estadística" subtitle="2° Año" />
       ),
     },
-    position: { x: 575, y: 75 },
+    position: { x: 275, y: 75 },
   },
   {
     id: "4",
@@ -71,7 +72,7 @@ const initialElements = [
         <NodeLabel title="Análisis Matemático II" subtitle="3° Año" />
       ),
     },
-    position: { x: 850, y: 110 },
+    position: { x: 525, y: 75 },
   },
   {
     id: "5",
@@ -81,7 +82,7 @@ const initialElements = [
         <NodeLabel title="Matemática Aplicada" subtitle="3° Año" />
       ),
     },
-    position: { x: 1050, y: 150 },
+    position: { x: 825, y: 150 },
   },
   {
     id: "6",
@@ -91,7 +92,7 @@ const initialElements = [
         <NodeLabel title="Modelos, Simulación y Teoría de la Decisión" subtitle="4° Año" />
       ),
     },
-    position: { x: 1250, y: 75 },
+    position: { x: 1050, y: 66 },
   },
   {
     id: "7",
@@ -101,7 +102,7 @@ const initialElements = [
         <NodeLabel title="Tecnología Aplicada" subtitle="1° Año" />
       ),
     },
-    position: { x: -50, y: 300 },
+    position: { x: -400, y: 300 },
   },
   {
     id: "8",
@@ -119,7 +120,7 @@ const initialElements = [
         <NodeLabel title="Arquitectura de Computadores I" subtitle="1° Año" />
       ),
     },
-    position: { x: 150, y: 300 },
+    position: { x:-200, y: 291 },
   },
   {
     id: "9",
@@ -140,7 +141,7 @@ const initialElements = [
         <NodeLabel title="Arquitectura de Computadores II" subtitle="2° Año" />
       ),
     },
-    position: { x: 375, y: 300 },
+    position: { x: 50, y: 291 },
   },
   {
     id: "10",
@@ -155,7 +156,7 @@ const initialElements = [
         <NodeLabel title="Sistemas Operativos I" subtitle="2° Año" />
       ),
     },
-    position: { x: 575, y: 400 },
+    position: { x: 275, y: 400 },
   },
   {
     id: "11",
@@ -165,7 +166,7 @@ const initialElements = [
         <NodeLabel title="Comunicación y Redes I" subtitle="2° Año" />
       ),
     },
-    position: { x: 575, y: 225 },
+    position: { x: 275, y: 225 },
   },
   {
     id: "12",
@@ -183,7 +184,7 @@ const initialElements = [
         <NodeLabel title="Comunicación y Redes II" subtitle="3° Año" />
       ),
     },
-    position: { x: 825, y: 225 },
+    position: { x: 525, y: 225 },
   },
   {
     id: "13",
@@ -197,7 +198,7 @@ const initialElements = [
         <NodeLabel title="Taller de Redes" subtitle="3° Año" />
       ),
     },
-    position: { x: 1050, y: 225 },
+    position: { x: 825, y: 225 },
   },
   {
     id: "14",
@@ -220,7 +221,7 @@ const initialElements = [
         <NodeLabel title="Sistemas Operativos II" subtitle="3° Año" />
       ),
     },
-    position: { x: 1050, y: 350 },
+    position: { x: 825, y: 350 },
   },
   {
     id: "15",
@@ -230,7 +231,7 @@ const initialElements = [
         <NodeLabel title="Sistemas de Tiempo Real y Misión Crítica" subtitle="5° Año" />
       ),
     },
-    position: { x: 1650, y: 350 },
+    position: { x: 1450, y: 350 },
   },
   {
     id: "16",
@@ -244,7 +245,7 @@ const initialElements = [
         <NodeLabel title="Infraestructura de Sistemas" subtitle="4° Año" />
       ),
     },
-    position: { x: 1450, y: 470 },
+    position: { x: 1250, y: 470 },
   },
   {
     id: "17",
@@ -259,7 +260,7 @@ const initialElements = [
         <NodeLabel title="Algoritmos y Estructura de Datos" subtitle="1° Año" />
       ),
     },
-    position: { x: -70, y: 575 },
+    position: { x: -400, y: 600 },
   },
   {
     id: "18",
@@ -269,7 +270,7 @@ const initialElements = [
         <NodeLabel title="Programación Orientada a Objetos I" subtitle="1° Año" />
       ),
     },
-    position: { x: 180, y: 500 },
+    position: { x:-200, y: 500 },
   },
   {
     id: "19",
@@ -283,7 +284,7 @@ const initialElements = [
         <NodeLabel title="Programación Orientada a Objetos II" subtitle="2° Año" />
       ),
     },
-    position: { x: 375, y: 500 },
+    position: { x: 50, y: 491 },
   },
   {
     id: "20",
@@ -293,7 +294,7 @@ const initialElements = [
         <NodeLabel title="Interfaces de Usuario y Tecnologías Web" subtitle="3° Año" />
       ),
     },
-    position: { x: 825, y: 475 },
+    position: { x: 525, y: 665 },
   },
   {
     id: "21",
@@ -303,7 +304,7 @@ const initialElements = [
         <NodeLabel title="Teoría de Sistemas y Organizaciones" subtitle="1° Año" />
       ),
     },
-    position: { x: 160, y: 625 },
+    position: { x:-200, y: 900 },
   },
   {
     id: "22",
@@ -317,7 +318,7 @@ const initialElements = [
         <NodeLabel title="Ingeniería de Software I" subtitle="2° Año" />
       ),
     },
-    position: { x: 575, y: 625 },
+    position: { x: 275, y: 720 },
   },
   {
     id: "23",
@@ -331,7 +332,7 @@ const initialElements = [
         <NodeLabel title="Matemática Discreta" subtitle="1° Año" />
       ),
     },
-    position: { x: -25, y: 725 },
+    position: { x: -400, y: 800 },
   },
   {
     id: "24",
@@ -345,7 +346,7 @@ const initialElements = [
         <NodeLabel title="Base de Datos I" subtitle="2° Año" />
       ),
     },
-    position: { x: 600, y: 565 },
+    position: { x: 275, y: 650 },
   },
   {
     id: "25",
@@ -359,7 +360,7 @@ const initialElements = [
         <NodeLabel title="Lenguajes Formales" subtitle="2° Año" />
       ),
     },
-    position: { x: 400, y: 725 },
+    position: { x: 50, y: 800 },
   },
   {
     id: "26",
@@ -378,7 +379,7 @@ const initialElements = [
         <NodeLabel title="Base de Datos II" subtitle="3° Año" />
       ),
     },
-    position: { x: 850, y: 575 },
+    position: { x: 525, y: 775 },
   },
   {
     id: "27",
@@ -394,7 +395,7 @@ const initialElements = [
         <NodeLabel title="Ingeniería de Software II" subtitle="3° Año" />
       ),
     },
-    position: { x: 825, y: 660 },
+    position: { x: 525, y: 850 },
   },
   {
     id: "28",
@@ -415,7 +416,7 @@ const initialElements = [
         <NodeLabel title="Programación Orientada a Objetos III" subtitle="3° Año" />
       ),
     },
-    position: { x: 1050, y: 545 },
+    position: { x: 825, y: 545 },
   },
   {
     id: "29",
@@ -425,7 +426,7 @@ const initialElements = [
         <NodeLabel title="Explotación de Datos" subtitle="3° Año" />
       ),
     },
-    position: { x: 1050, y: 650 },
+    position: { x: 825, y: 650 },
   },
   {
     id: "30",
@@ -435,7 +436,7 @@ const initialElements = [
         <NodeLabel title="Dirección y Evaluación de Proyectos Informáticos" subtitle="4° Año" />
       ),
     },
-    position: { x: 1260, y: 725 },
+    position: { x: 1050, y: 725 },
   },
   {
     id: "31",
@@ -449,7 +450,7 @@ const initialElements = [
         <NodeLabel title="Arquitectura de Software" subtitle="4° Año" />
       ),
     },
-    position: { x: 1260, y: 625 },
+    position: { x: 1050, y: 605 },
   },
   {
     id: "32",
@@ -463,7 +464,7 @@ const initialElements = [
         <NodeLabel title="Metodología de la Investigación" subtitle="4° Año" />
       ),
     },
-    position: { x: 1260, y: 280 },
+    position: { x: 1050, y: 280 },
   },
   {
     id: "33",
@@ -477,7 +478,7 @@ const initialElements = [
         <NodeLabel title="Paradigmas de Programación" subtitle="4° Año" />
       ),
     },
-    position: { x: 1260, y: 520 },
+    position: { x: 1050, y: 512 },
   },
   {
     id: "34",
@@ -491,7 +492,7 @@ const initialElements = [
         <NodeLabel title="Lenguajes de Programación" subtitle="4° Año" />
       ),
     },
-    position: { x: 1260, y: 385 },
+    position: { x: 1050, y: 385 },
   },
   {
     id: "35",
@@ -501,7 +502,7 @@ const initialElements = [
         <NodeLabel title="Desarrollo de Compiladores" subtitle="4° Año" />
       ),
     },
-    position: { x: 1455, y: 375 },
+    position: { x: 1255, y: 375 },
   },
   {
     id: "36",
@@ -511,7 +512,7 @@ const initialElements = [
         <NodeLabel title="Inteligencia Artificial" subtitle="4° Año" />
       ),
     },
-    position: { x: 1455, y: 575 },
+    position: { x: 1255, y: 575 },
   },
   {
     id: "37",
@@ -527,7 +528,7 @@ const initialElements = [
         <NodeLabel title="Práctica Profesional" subtitle="4° Año" />
       ),
     },
-    position: { x: 1455, y: 670 },
+    position: { x: 1255, y: 670 },
   },
   {
     id: "38",
@@ -537,7 +538,7 @@ const initialElements = [
         <NodeLabel title="Optativa I" subtitle="5° Año" />
       ),
     },
-    position: { x: 1650, y: 100 },
+    position: { x: 1450, y: 100 },
   },
   {
     id: "39",
@@ -547,7 +548,7 @@ const initialElements = [
         <NodeLabel title="Aspectos Legales y Sociales de la Informática" subtitle="5° Año" />
       ),
     },
-    position: { x: 1650, y: 200 },
+    position: { x: 1450, y: 200 },
   },
   {
     id: "40",
@@ -557,7 +558,7 @@ const initialElements = [
         <NodeLabel title="Ingeniería de Software III" subtitle="5° Año" />
       ),
     },
-    position: { x: 1650, y: 725 },
+    position: { x: 1450, y: 850 },
   },
   {
     id: "41",
@@ -567,7 +568,7 @@ const initialElements = [
         <NodeLabel title="Economía I" subtitle="5° Año" />
       ),
     },
-    position: { x: 1650, y: 525 },
+    position: { x: 1450, y: 525 },
   },
   {
     id: "42",
@@ -577,7 +578,7 @@ const initialElements = [
         <NodeLabel title="Optativa II" subtitle="5° Año" />
       ),
     },
-    position: { x: 1850, y: 100 },
+    position: { x: 1650, y: 100 },
   },
   {
     id: "43",
@@ -592,7 +593,7 @@ const initialElements = [
         <NodeLabel title="Seguridad y Auditoría" subtitle="5° Año" />
       ),
     },
-    position: { x: 1850, y: 300 },
+    position: { x: 1650, y: 300 },
   },
   {
     id: "44",
@@ -607,7 +608,7 @@ const initialElements = [
         <NodeLabel title="Teoría de la Computación" subtitle="5° Año" />
       ),
     },
-    position: { x: 1850, y: 450 },
+    position: { x: 1650, y: 450 },
   },
   {
     id: "45",
@@ -617,7 +618,7 @@ const initialElements = [
         <NodeLabel title="Administración y Gestión de las Organizaciones" subtitle="5° Año" />
       ),
     },
-    position: { x: 1850, y: 700 },
+    position: { x: 1650, y: 700 },
   },
   {
     id: "46",
@@ -627,7 +628,7 @@ const initialElements = [
         <NodeLabel title="Economía II" subtitle="5° Año" />
       ),
     },
-    position: { x: 1850, y: 525 },
+    position: { x: 1650, y: 525 },
   },
   {
     id: "47",
@@ -643,7 +644,7 @@ const initialElements = [
         <NodeLabel title="Trabajo Final" subtitle="5° Año" />
       ),
     },
-    position: { x: 1650, y: 620 },
+    position: { x: 1450, y: 620 },
   },
   {
     id: "48",
@@ -653,7 +654,7 @@ const initialElements = [
         <NodeLabel title="Electiva" subtitle="2° Año" />
       ),
     },
-    position: { x: 380, y: 190 },
+    position: { x: 50, y: 190 },
   },
   {
     id: "49",
@@ -663,7 +664,7 @@ const initialElements = [
         <NodeLabel title="Universidad, Ciencia y Sociedad" subtitle="2° Año" />
       ),
     },
-    position: { x: 575, y: 780 },
+    position: { x: 275, y: 850 },
   },
   {
     id: "50",
@@ -673,7 +674,7 @@ const initialElements = [
         <NodeLabel title="Problemática Regional" subtitle="1° Año" />
       ),
     },
-    position: { x: 160, y: 780 },
+    position: { x:-200, y: 175 },
   },
   {
     id: "51",
@@ -683,7 +684,7 @@ const initialElements = [
         <NodeLabel title="Análisis y Producción del Discurso" subtitle="1° Año" />
       ),
     },
-    position: { x: -50, y: 400 },
+    position: { x: -400, y: 400 },
   },
   {
     id: "52",
@@ -693,7 +694,7 @@ const initialElements = [
         <NodeLabel title="Trabajo Social Obligatorio" subtitle="3° Año" />
       ),
     },
-    position: { x: 1050, y: 780 },
+    position: { x: 825, y: 900 },
   },
   {
     id: "53",
@@ -703,7 +704,7 @@ const initialElements = [
         <NodeLabel title="Inglés I" />
       ),
     },
-    position: { x: 575, y: 875 },
+    position: { x: 275, y: 1000 },
   },
   {
     id: "54",
@@ -713,7 +714,7 @@ const initialElements = [
         <NodeLabel title="Inglés II" />
       ),
     },
-    position: { x: 1050, y: 850 },
+    position: { x: 825, y: 1000 },
   },
 
 
@@ -764,14 +765,14 @@ const initialElements = [
     source: "8",
     target: "10",
     sourceHandle: "c",
-    type: "smoothstep",
+    type: "smart",
   },
   {
     id: "e8a-11",
     source: "8",
     target: "11",
     sourceHandle: "a",
-    type: "smoothstep",
+    type: 'smart',
   },
   {
     id: "e11-12",
@@ -791,13 +792,13 @@ const initialElements = [
     source: "12",
     target: "14",
     sourceHandle: "b",
-    type: "smoothstep",
+    type: "smart",
   },
   {
     id: "e9a-14b",
     source: "9",
     target: "14",
-    type: "smoothstep",
+    type: "smart",
     sourceHandle: "a",
     targetHandle: "b",
   },
@@ -805,7 +806,7 @@ const initialElements = [
     id: "e10a-14c",
     source: "10",
     target: "14",
-    type: "smoothstep",
+    type: "smart",
     targetHandle: "c",
     sourceHandle: "a",
   },
@@ -850,7 +851,7 @@ const initialElements = [
     source: "19",
     target: "20",
     sourceHandle: "a",
-    type: "smoothstep",
+    type: "smart",
   },
   {
     id: "e17c-22a",
@@ -858,14 +859,14 @@ const initialElements = [
     target: "22",
     sourceHandle: "c",
     targetHandle: "a",
-    type: "smoothstep",
+    type: "smart",
   },
   {
     id: "e21-22b",
     source: "21",
     target: "22",
     targetHandle: "b",
-    type: "smoothstep",
+    type: "smart",
   },
   {
     id: "e17b-24a",
@@ -895,7 +896,7 @@ const initialElements = [
     source: "24",
     target: "26",
     targetHandle: "b",
-    type: "smoothstep",
+    type: "smart",
   },
   {
     id: "e10b-26a",
@@ -903,7 +904,7 @@ const initialElements = [
     target: "26",
     sourceHandle: "b",
     targetHandle: "a",
-    type: "smoothstep",
+    type: "smart",
   },
   {
     id: "e22-27",
@@ -917,7 +918,7 @@ const initialElements = [
     target: "28",
     sourceHandle: "a",
     targetHandle: "c",
-    type: "smoothstep",
+    type: "smart",
   },
   {
     id: "e19b-28b",
@@ -925,7 +926,7 @@ const initialElements = [
     target: "28",
     sourceHandle: "b",
     targetHandle: "b",
-    type: "smoothstep",
+    type: "smart",
   },
   {
     id: "e10c-28a",
@@ -933,14 +934,14 @@ const initialElements = [
     target: "28",
     sourceHandle: "c",
     targetHandle: "a",
-    type: "smoothstep",
+    type: "smart",
   },
   {
     id: "e26b-29",
     source: "26",
     target: "29",
     sourceHandle: "b",
-    type: "smoothstep",
+    type: "smart",
   },
   {
     id: "e27d-30",
@@ -955,7 +956,7 @@ const initialElements = [
     target: "31",
     sourceHandle: "c",
     targetHandle: "a",
-    type: "smoothstep",
+    type: "smart",
   },
   {
     id: "e27c-31b",
@@ -994,7 +995,7 @@ const initialElements = [
     target: "33",
     sourceHandle: "b",
     targetHandle: "b",
-    type: "smoothstep",
+    type: "smart",
   },
   {
     id: "e25a-34a",
@@ -1002,7 +1003,7 @@ const initialElements = [
     target: "34",
     targetHandle: "a",
     sourceHandle: "a",
-    type: "smoothstep",
+    type: "smart",
   },
   {
     id: "e28a-34b",
@@ -1037,7 +1038,7 @@ const initialElements = [
     source: "20",
     target: "37",
     targetHandle: "b",
-    type: "smoothstep",
+    type: "smart",
   },
   {
     id: "e29-37c",
@@ -1082,7 +1083,7 @@ const initialElements = [
     target: "43",
     sourceHandle: "c",
     targetHandle: "c",
-    type: "smoothstep",
+    type: "smart",
   },
   {
     id: "e35-44a",
@@ -1134,4 +1135,4 @@ const initialElements = [
   },
 ];
 
-export default initialElements;
+export default materiasDeInformatica;

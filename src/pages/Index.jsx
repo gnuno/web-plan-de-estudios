@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Container } from "../components/atoms/Container";
@@ -10,12 +11,12 @@ const Body = styled.main`
 `;
 
 const careers = [
+  { name: "Licenciatura en Administración de Recursos Humanos", path: "/rrhh", duration: "5 años", image: "http://uno.edu.ar/images/contenidos/lic-rrhh.jpg", tituloIntermedio: "Tecnicatura Universitaria en Administración de Recursos Humanos", yearOfTituloIntermedio: "3 años" },
   { name: "Licenciatura en Informatica", path: "/info", image: "http://uno.edu.ar/images/contenidos/lic-informatica.jpg", duration: "5 años", tituloIntermedio: "Analista en Informática", yearOfTituloIntermedio: "3 años" },
   { name: "Licenciatura en Administración", path: "/admin", duration: "4 años", image: "http://uno.edu.ar/images/contenidos/lic-administracion.jpg", tituloIntermedio: "Tecnicatura en Administración", yearOfTituloIntermedio: "3 años" },
   { name: "Ingeniería Química", path: "/quimica", duration: "5 años", image: "http://uno.edu.ar/images/contenidos/lic-ingenieria.jpg", tituloIntermedio: "Certificación Diplomado en Ciencias Básicas", yearOfTituloIntermedio: "2 años" },
-  { name: "Licenciatura en Matemática", path: "/matematica", duration: "2 años", image: "http://uno.edu.ar/images/contenidos/lic-matematica.jpg" },
   { name: "Licenciatura en Administración Pública", path: "/admin_publica", duration: "5 años", image: "http://uno.edu.ar/images/contenidos/lic-admpublica.jpg", tituloIntermedio: "Tecnicatura en Administración Pública", yearOfTituloIntermedio: "3 años" },
-  { name: "Licenciatura en Administración de Recursos Humanos", path: "/rrhh", duration: "5 años", image: "http://uno.edu.ar/images/contenidos/lic-rrhh.jpg", tituloIntermedio: "Tecnicatura Universitaria en Administración de Recursos Humanos", yearOfTituloIntermedio: "3 años" },
+  { name: "Licenciatura en Matemática", path: "/matematica", duration: "2 años", image: "http://uno.edu.ar/images/contenidos/lic-matematica.jpg" },
   { name: "Licenciatura en Economía", path: "/economia", duration: "4 años", image: "http://uno.edu.ar/images/contenidos/lic-economia.jpg", tituloIntermedio: "Tecnicatura Universitaria en Asuntos Económicos", yearOfTituloIntermedio: "3 años" },
   { name: "Licenciatura en Gestión Educativa", path: "/gestion_educativa", duration: "2 años", image: "http://uno.edu.ar/images/contenidos/lic-GE.jpg" },
   { name: "Licenciatura en Enfermería", path: "/enf", duration: "5 años", image: "http://uno.edu.ar/images/contenidos/lic-enfermeria.jpg", tituloIntermedio: "Enfermería", yearOfTituloIntermedio: "3 años" },
@@ -24,7 +25,6 @@ const careers = [
   { name: "Maestría en Gestión Integral de Residuos Sólidos Urbanos", path: "/gestion_integral_residuos", duration: "2 años", image: "http://uno.edu.ar/images/noticias/2019/12/residuos-solidos-2019.jpg" },
 ]
 export default function Index() {
- 
   const [careersToShow, setCareersToShow] = React.useState(careers);
   // const careers = [
   //   { name: "Informatica", path: "/info" },
@@ -36,10 +36,6 @@ export default function Index() {
   //   { name: "Recursos Humanos", path: "/rrhh" }
   // ]
 
- 
-
-
-
 
   return (<>
     <div className="hero min-h-screen" style={{ backgroundImage: "url(https://media.infocielo.com/p/1e62986c96574ba07cf964374b0517a3/adjuntos/299/imagenes/001/324/0001324423/1200x900/smart/186334631_5484897501581638_1528356223788102322_njpg.jpg)" }}>
@@ -49,10 +45,10 @@ export default function Index() {
           <h1 className="mb-5 text-5xl font-bold">Plan de Estudios Interactivo</h1>
           <p className="mb-5">Bienvenides al Plan de Estudios Interactivo de la Universidad Nacional del Oeste.</p>
         </div>
-
+        <svg className="animate-bounce" width="60" fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M192 384c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L192 306.8l137.4-137.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-160 160C208.4 380.9 200.2 384 192 384z"/></svg>
       </div>
       <div className='w-full h-full relative'>
-        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" class="fill-white bg-transparent  absolute bottom-0"><path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="shape-fill"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" class="fill-white dark:fill-base-100 bg-transparent  absolute -bottom-1"><path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="shape-fill"></path></svg>
       </div>
     </div>
     <div className="w-full pb-10">
@@ -75,12 +71,12 @@ export default function Index() {
           </div>
         </div></div>
       </div>
-      <div className="flex overflow-x-scroll md:overflow-auto snap-x snap-mandatory justify-center">
-        <div className="grid grid-flow-col pb-8 mt-3 gap-5">
+      <div className="flex overflow-x-scroll md:overflow-auto mx-auto">
+        <div className="snap-x snap-mandatory grid grid-flow-col pb-8 mt-3 gap-5 mx-auto first:ml-16 last:mr-16">
           {careersToShow.map(career => (
-            <div className="card w-96 max-w-[18rem] md:max-w-3xl  bg-base-100 shadow-xl">
+            <div className="card w-96 max-w-[18rem] md:max-w-3xl  shadow-xl scroll-mx-32 snap-start bg-base-100 dark:bg-slate-600 ">
               <figure><img src={career.image} alt={career.name} /></figure>
-              <div className="card-body text-gray-900 justify-between">
+              <div className="card-body text-gray-900 dark:text-slate-100 justify-between">
                 <h2 className="card-title">{career.name}</h2>
 
                 <div className="stat p-2">
@@ -97,7 +93,14 @@ export default function Index() {
                 )}
 
                 <div className="card-actions justify-center">
+                  <Link to={{
+                    pathname: '/carrera' + career.path,
+                    state:{
+                      career: career
+                    }
+                  }}  key={career.path}>
                   <button className="btn btn-primary">Plan de estudios!</button>
+                  </Link>
                 </div>
               </div>
             </div>

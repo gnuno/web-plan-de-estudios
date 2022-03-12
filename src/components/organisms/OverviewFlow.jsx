@@ -2,50 +2,42 @@ import React, { useState } from "react";
 
 import ReactFlow, { MiniMap, Controls, Background } from "react-flow-renderer";
 
-import initialElements from "../atoms/initialElements/initial-elements";
 import MultipleConnectionNode from "../atoms/multipleConnectionNode/MultipleConnectionNode";
+import { SmartEdge } from '@tisoap/react-flow-smart-edge';
+import nodesByCareer from "../atoms/materias";
 
-const nodeTypes = {
-  multipleNode: MultipleConnectionNode,
-};
+// const nodeTypes = {
+//   multipleNode: MultipleConnectionNode
+// };
 
 const onLoad = (reactFlowInstance) => {
   console.log("flow loaded:", reactFlowInstance);
   reactFlowInstance.fitView();
 };
 
-const OverviewFlow = () => {
-  const [elements] = useState(initialElements);
-
+const OverviewFlow = (props) => {
   return (
-    <ReactFlow
-      elements={elements}
-      onLoad={onLoad}
-      style={{ height: "90vh" }}
-      nodesConnectable={false}
-      nodesDraggable={true}
-      nodeTypes={nodeTypes}
-    >
-      <MiniMap
+    <div className="pb-10">
 
-        nodeStrokeColor={(n) => {
-          if (n.style?.background) return n.style.background;
-          if (n.type === "input") return "#0041d0";
-          if (n.type === "output") return "#ff0072";
-          if (n.type === "default") return "#1a192b";
-
-          return "#eee";
+    <div className="my-2 container flex justify-center items-center mx-auto border-gray-200 shadow-xl drop-shadow-xl border-2 rounded-3xl  overflow-clip">
+      <ReactFlow
+        elements={nodesByCareer[props.career]}
+        onLoad={onLoad}
+        style={{ height: "100vh" }}
+        className="max-h-[36rem]"
+        edgeTypes={{
+          smart: SmartEdge,
         }}
-        nodeColor={(n) => {
-          if (n.style?.background) return n.style.background;
+        nodesConnectable={false}
+        nodesDraggable={false}
+        // nodeTypes={nodeTypes}
+      >
 
-          return "#fff";
-        }}
-        nodeBorderRadius={2}
-      />
-      <Background variant="lines" color="var(--red)" gap={200}/>
-      <Controls />
-    </ReactFlow>
+        <Background variant="lines"  gap={200}/>
+        <Controls />
+      </ReactFlow>
+    </div>
+    </div>
   );
 };
 
