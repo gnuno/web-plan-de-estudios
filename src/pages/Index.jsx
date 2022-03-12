@@ -3,6 +3,8 @@ import { useHistory } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Container } from "../components/atoms/Container";
+import { resumenDeCarreraEducacionFisica } from '../info_de_carreras/lic_en_educacion_fisica';
+import { resumenDeCarreraInformatica } from '../info_de_carreras/lic_en_informatica';
 
 const Body = styled.main`
     width: 100%;
@@ -11,18 +13,18 @@ const Body = styled.main`
 `;
 
 const careers = [
-  { name: "Licenciatura en Administración de Recursos Humanos", path: "/rrhh", duration: "5 años", image: "http://uno.edu.ar/images/contenidos/lic-rrhh.jpg", tituloIntermedio: "Tecnicatura Universitaria en Administración de Recursos Humanos", yearOfTituloIntermedio: "3 años" },
-  { name: "Licenciatura en Informatica", path: "/info", image: "http://uno.edu.ar/images/contenidos/lic-informatica.jpg", duration: "5 años", tituloIntermedio: "Analista en Informática", yearOfTituloIntermedio: "3 años" },
-  { name: "Licenciatura en Administración", path: "/admin", duration: "4 años", image: "http://uno.edu.ar/images/contenidos/lic-administracion.jpg", tituloIntermedio: "Tecnicatura en Administración", yearOfTituloIntermedio: "3 años" },
-  { name: "Ingeniería Química", path: "/quimica", duration: "5 años", image: "http://uno.edu.ar/images/contenidos/lic-ingenieria.jpg", tituloIntermedio: "Certificación Diplomado en Ciencias Básicas", yearOfTituloIntermedio: "2 años" },
-  { name: "Licenciatura en Administración Pública", path: "/admin_publica", duration: "5 años", image: "http://uno.edu.ar/images/contenidos/lic-admpublica.jpg", tituloIntermedio: "Tecnicatura en Administración Pública", yearOfTituloIntermedio: "3 años" },
-  { name: "Licenciatura en Matemática", path: "/matematica", duration: "2 años", image: "http://uno.edu.ar/images/contenidos/lic-matematica.jpg" },
-  { name: "Licenciatura en Economía", path: "/economia", duration: "4 años", image: "http://uno.edu.ar/images/contenidos/lic-economia.jpg", tituloIntermedio: "Tecnicatura Universitaria en Asuntos Económicos", yearOfTituloIntermedio: "3 años" },
-  { name: "Licenciatura en Gestión Educativa", path: "/gestion_educativa", duration: "2 años", image: "http://uno.edu.ar/images/contenidos/lic-GE.jpg" },
-  { name: "Licenciatura en Enfermería", path: "/enf", duration: "5 años", image: "http://uno.edu.ar/images/contenidos/lic-enfermeria.jpg", tituloIntermedio: "Enfermería", yearOfTituloIntermedio: "3 años" },
-  { name: "Odontología", path: "/odontologia", duration: "5 años", image: "https://i.imgur.com/V4KoiWE.jpeg" },
-  { name: "Licenciatura en Educación Física", path: "/educacion_fisica", duration: "2 años", image: "http://uno.edu.ar/images/contenidos/lic-EF.jpg" },
-  { name: "Maestría en Gestión Integral de Residuos Sólidos Urbanos", path: "/gestion_integral_residuos", duration: "2 años", image: "http://uno.edu.ar/images/noticias/2019/12/residuos-solidos-2019.jpg" },
+  resumenDeCarreraInformatica,
+  resumenDeCarreraEducacionFisica,
+  { disabled: true, name: "Licenciatura en Administración de Recursos Humanos", path: "/rrhh", duration: "5 años", image: "http://uno.edu.ar/images/contenidos/lic-rrhh.jpg", tituloIntermedio: "Tecnicatura Universitaria en Administración de Recursos Humanos", yearOfTituloIntermedio: "3 años" },
+  { disabled: true, name: "Licenciatura en Administración", path: "/admin", duration: "4 años", image: "http://uno.edu.ar/images/contenidos/lic-administracion.jpg", tituloIntermedio: "Tecnicatura en Administración", yearOfTituloIntermedio: "3 años" },
+  { disabled: true, name: "Ingeniería Química", path: "/quimica", duration: "5 años", image: "http://uno.edu.ar/images/contenidos/lic-ingenieria.jpg", tituloIntermedio: "Certificación Diplomado en Ciencias Básicas", yearOfTituloIntermedio: "2 años" },
+  { disabled: true, name: "Licenciatura en Administración Pública", path: "/admin_publica", duration: "5 años", image: "http://uno.edu.ar/images/contenidos/lic-admpublica.jpg", tituloIntermedio: "Tecnicatura en Administración Pública", yearOfTituloIntermedio: "3 años" },
+  { disabled: true, name: "Licenciatura en Matemática", path: "/matematica", duration: "2 años", image: "http://uno.edu.ar/images/contenidos/lic-matematica.jpg" },
+  { disabled: true, name: "Licenciatura en Economía", path: "/economia", duration: "4 años", image: "http://uno.edu.ar/images/contenidos/lic-economia.jpg", tituloIntermedio: "Tecnicatura Universitaria en Asuntos Económicos", yearOfTituloIntermedio: "3 años" },
+  { disabled: true, name: "Licenciatura en Gestión Educativa", path: "/gestion_educativa", duration: "2 años", image: "http://uno.edu.ar/images/contenidos/lic-GE.jpg" },
+  { disabled: true, name: "Licenciatura en Enfermería", path: "/enf", duration: "5 años", image: "http://uno.edu.ar/images/contenidos/lic-enfermeria.jpg", tituloIntermedio: "Enfermería", yearOfTituloIntermedio: "3 años" },
+  { disabled: true, name: "Odontología", path: "/odontologia", duration: "5 años", image: "https://i.imgur.com/V4KoiWE.jpeg" },
+  { disabled: true, name: "Maestría en Gestión Integral de Residuos Sólidos Urbanos", path: "/gestion_integral_residuos", duration: "2 años", image: "http://uno.edu.ar/images/noticias/2019/12/residuos-solidos-2019.jpg" },
 ]
 export default function Index() {
   const [careersToShow, setCareersToShow] = React.useState(careers);
@@ -73,38 +75,7 @@ export default function Index() {
       </div>
       <div className="flex overflow-x-scroll md:overflow-auto mx-auto">
         <div className="snap-x snap-mandatory grid grid-flow-col pb-8 mt-3 gap-5 mx-auto first:ml-16 last:mr-16">
-          {careersToShow.map(career => (
-            <div className="card w-96 max-w-[18rem] md:max-w-3xl  shadow-xl scroll-mx-32 snap-start bg-base-100 dark:bg-slate-600 ">
-              <figure><img src={career.image} alt={career.name} /></figure>
-              <div className="card-body text-gray-900 dark:text-slate-100 justify-between">
-                <h2 className="card-title">{career.name}</h2>
-
-                <div className="stat p-2">
-                  <div className="stat-title">Duración de la carrera</div>
-                  <div className="stat-value text-primary">{career.duration}</div>
-                </div>
-
-                {career.tituloIntermedio && (
-                  <div className="stat p-2">
-                    <div className="stat-title whitespace-pre-wrap">{career.tituloIntermedio}</div>
-                    <div className="stat-value text-secondary">{career.yearOfTituloIntermedio}</div>
-                    <div className="stat-desc">Titulo intermedio</div>
-                  </div>
-                )}
-
-                <div className="card-actions justify-center">
-                  <Link to={{
-                    pathname: '/carrera' + career.path,
-                    state:{
-                      career: career
-                    }
-                  }}  key={career.path}>
-                  <button className="btn btn-primary">Plan de estudios!</button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          ))}
+          {careersToShow.map(CardDeCarreras())}
 
 
         </div>
@@ -124,4 +95,41 @@ export default function Index() {
       </Container>
     </Body>
   );
+
+  function CardDeCarreras() {
+    return career => (
+      <div className="card w-96 max-w-[18rem] md:max-w-3xl  shadow-xl scroll-mx-32 snap-start bg-base-100 dark:bg-slate-600 ">
+        <figure><img src={career.image} alt={career.name} /></figure>
+        <div className="card-body text-gray-900 dark:text-slate-100 justify-between">
+          <h2 className="card-title">{career.name}</h2>
+
+          <div className="stat p-2">
+            <div className="stat-title">Duración de la carrera</div>
+            <div className="stat-value text-primary">{career.duration}</div>
+          </div>
+
+          {career.tituloIntermedio && (
+            <div className="stat p-2">
+              <div className="stat-title whitespace-pre-wrap">{career.tituloIntermedio}</div>
+              <div className="stat-value text-secondary">{career.yearOfTituloIntermedio}</div>
+              <div className="stat-desc">Titulo intermedio</div>
+            </div>
+          )}
+
+          <div className="card-actions justify-center">
+            {career.disabled ? (
+              <button className="btn btn-disabled">Plan de estudios!</button>
+            ) : (<><Link to={{
+              pathname: '/carrera' + career.path,
+              state: {
+                career: career
+              }
+            }} key={career.path}>
+              <button className="btn btn-primary">Plan de estudios!</button>
+            </Link></>)}
+          </div>
+        </div>
+      </div>
+    );
+  }
 };

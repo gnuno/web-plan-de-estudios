@@ -3,21 +3,13 @@ import { useLocation } from 'react-router-dom';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import { useModal } from '../components/helper/ModalContext';
 import OverviewFlow from '../components/organisms/OverviewFlow';
+import { descripcionDeCarreraEduFisica } from '../info_de_carreras/lic_en_educacion_fisica';
+import { descripcionDeCarreraInformatica } from '../info_de_carreras/lic_en_informatica';
 
 
 const descriptions = {
-  "/info": {
-    shortDescription: "Se propone formar egresados con significativos fundamentos teóricos de informática y conocimiento actualizado de las tecnologías, lo que le permitirá seguir capacitándose permanentemente al ritmo de la evolución tecnológica.",
-    longDescription: () => (<p className="py-2 ">
-      Se propone formar egresados con significativos fundamentos teóricos de informática y conocimiento actualizado de las tecnologías, lo que le permitirá seguir capacitándose permanentemente al ritmo de la evolución tecnológica. Podrá planificar, dirigir, realizar y/o evaluar proyectos de diseño, verificación, puesta a punto, mantenimiento y actualización para redes de comunicaciones que vinculen sistemas de procesamiento de datos. Podrá realizar la especificación del co-diseño hardware-software y prueba funcional (real o simulada) de la arquitectura.
-      <br />
-      <br />
-      El egresado de esta carrera estará capacitado para controlar las normas de calidad en el software o software integrado a otros componentes y efectuar las tareas de auditoría de los sistemas informáticos, realizar arbitrajes, peritajes, y tasaciones relacionadas con los sistemas informáticos.
-      <br />
-      <br />
-      También podrá realizar tareas como docente universitario en informática en todos los niveles, de acuerdo a la jerarquía de título de grado máximo.
-    </p>)
-  }
+  "/info": descripcionDeCarreraInformatica,
+  "/educacion_fisica": descripcionDeCarreraEduFisica
 }
 
 export default function Career() {
