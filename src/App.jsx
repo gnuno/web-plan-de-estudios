@@ -1,11 +1,12 @@
 import React from 'react'
 import { BrowserRouter, Route } from "react-router-dom";
+import "./assets/index.css";
 
 import Index from './pages/Index';
 import Career from './pages/Career';
 
-import Footer from './components/molecules/Footer';
-import Header from './components/molecules/Header';
+import Header from './components/molecules/Header2';
+import Footer from './components/molecules/Footer2';
 
 export default function App() {
   return (

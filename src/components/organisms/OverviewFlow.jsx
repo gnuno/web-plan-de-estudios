@@ -23,10 +23,11 @@ const OverviewFlow = () => {
       onLoad={onLoad}
       style={{ height: "90vh" }}
       nodesConnectable={false}
-      nodesDraggable={false}
+      nodesDraggable={true}
       nodeTypes={nodeTypes}
     >
       <MiniMap
+
         nodeStrokeColor={(n) => {
           if (n.style?.background) return n.style.background;
           if (n.type === "input") return "#0041d0";
