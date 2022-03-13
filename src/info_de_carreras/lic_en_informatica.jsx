@@ -1,7 +1,7 @@
 import { base, fullWidthNodeStyles, multiNodeBase } from "../components/atoms/initialElements/initial-elements";
 import { NodeLabel } from "../components/atoms/initialElements/initial-elements.utils";
 
-export const resumenDeCarreraInformatica = { name: "Licenciatura en Informatica", path: "/info", image: "http://uno.edu.ar/images/contenidos/lic-informatica.jpg", duration: "5 años", tituloIntermedio: "Analista en Informática", yearOfTituloIntermedio: "3 años" }
+export const resumenDeCarreraInformatica = { name: "Licenciatura en Informatica", path: "/info", image: "https://i.imgur.com/oVepi2X.jpeg", duration: "5 años", tituloIntermedio: "Analista en Informática", yearOfTituloIntermedio: "3 años" }
 
 export const descripcionDeCarreraInformatica = {
   shortDescription: "Se propone formar egresados con significativos fundamentos teóricos de informática y conocimiento actualizado de las tecnologías, lo que le permitirá seguir capacitándose permanentemente al ritmo de la evolución tecnológica.",

@@ -15,16 +15,16 @@ const Body = styled.main`
 const careers = [
   resumenDeCarreraInformatica,
   resumenDeCarreraEducacionFisica,
-  { disabled: true, name: "Licenciatura en Administración de Recursos Humanos", path: "/rrhh", duration: "5 años", image: "http://uno.edu.ar/images/contenidos/lic-rrhh.jpg", tituloIntermedio: "Tecnicatura Universitaria en Administración de Recursos Humanos", yearOfTituloIntermedio: "3 años" },
-  { disabled: true, name: "Licenciatura en Administración", path: "/admin", duration: "4 años", image: "http://uno.edu.ar/images/contenidos/lic-administracion.jpg", tituloIntermedio: "Tecnicatura en Administración", yearOfTituloIntermedio: "3 años" },
-  { disabled: true, name: "Ingeniería Química", path: "/quimica", duration: "5 años", image: "http://uno.edu.ar/images/contenidos/lic-ingenieria.jpg", tituloIntermedio: "Certificación Diplomado en Ciencias Básicas", yearOfTituloIntermedio: "2 años" },
-  { disabled: true, name: "Licenciatura en Administración Pública", path: "/admin_publica", duration: "5 años", image: "http://uno.edu.ar/images/contenidos/lic-admpublica.jpg", tituloIntermedio: "Tecnicatura en Administración Pública", yearOfTituloIntermedio: "3 años" },
-  { disabled: true, name: "Licenciatura en Matemática", path: "/matematica", duration: "2 años", image: "http://uno.edu.ar/images/contenidos/lic-matematica.jpg" },
-  { disabled: true, name: "Licenciatura en Economía", path: "/economia", duration: "4 años", image: "http://uno.edu.ar/images/contenidos/lic-economia.jpg", tituloIntermedio: "Tecnicatura Universitaria en Asuntos Económicos", yearOfTituloIntermedio: "3 años" },
-  { disabled: true, name: "Licenciatura en Gestión Educativa", path: "/gestion_educativa", duration: "2 años", image: "http://uno.edu.ar/images/contenidos/lic-GE.jpg" },
-  { disabled: true, name: "Licenciatura en Enfermería", path: "/enf", duration: "5 años", image: "http://uno.edu.ar/images/contenidos/lic-enfermeria.jpg", tituloIntermedio: "Enfermería", yearOfTituloIntermedio: "3 años" },
+  { disabled: true, name: "Licenciatura en Administración de Recursos Humanos", path: "/rrhh", duration: "5 años", image: "https://i.imgur.com/urwwJNv.jpeg", tituloIntermedio: "Tecnicatura Universitaria en Administración de Recursos Humanos", yearOfTituloIntermedio: "3 años" },
+  { disabled: true, name: "Licenciatura en Administración", path: "/admin", duration: "4 años", image: "https://i.imgur.com/bbtHEnR.jpeg", tituloIntermedio: "Tecnicatura en Administración", yearOfTituloIntermedio: "3 años" },
+  { disabled: true, name: "Ingeniería Química", path: "/quimica", duration: "5 años", image: "https://i.imgur.com/zLPdPGt.jpeg", tituloIntermedio: "Certificación Diplomado en Ciencias Básicas", yearOfTituloIntermedio: "2 años" },
+  { disabled: true, name: "Licenciatura en Administración Pública", path: "/admin_publica", duration: "5 años", image: "https://i.imgur.com/ZJDLbJt.jpeg", tituloIntermedio: "Tecnicatura en Administración Pública", yearOfTituloIntermedio: "3 años" },
+  { disabled: true, name: "Licenciatura en Matemática", path: "/matematica", duration: "2 años", image: "https://i.imgur.com/Gcd0rWI.jpeg" },
+  { disabled: true, name: "Licenciatura en Economía", path: "/economia", duration: "4 años", image: "https://i.imgur.com/9gIWOpP.jpeg", tituloIntermedio: "Tecnicatura Universitaria en Asuntos Económicos", yearOfTituloIntermedio: "3 años" },
+  { disabled: true, name: "Licenciatura en Gestión Educativa", path: "/gestion_educativa", duration: "2 años", image: "https://i.imgur.com/pzZQOrx.jpeg" },
+  { disabled: true, name: "Licenciatura en Enfermería", path: "/enf", duration: "5 años", image: "https://i.imgur.com/Q4Z0dRw.jpeg", tituloIntermedio: "Enfermería", yearOfTituloIntermedio: "3 años" },
   { disabled: true, name: "Odontología", path: "/odontologia", duration: "5 años", image: "https://i.imgur.com/V4KoiWE.jpeg" },
-  { disabled: true, name: "Maestría en Gestión Integral de Residuos Sólidos Urbanos", path: "/gestion_integral_residuos", duration: "2 años", image: "http://uno.edu.ar/images/noticias/2019/12/residuos-solidos-2019.jpg" },
+  { disabled: true, name: "Maestría en Gestión Integral de Residuos Sólidos Urbanos", path: "/gestion_integral_residuos", duration: "2 años", image: "https://i.imgur.com/SBcdUp0.jpeg" },
 ]
 export default function Index() {
   const [careersToShow, setCareersToShow] = React.useState(careers);

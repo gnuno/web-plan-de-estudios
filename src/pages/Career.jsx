@@ -43,7 +43,7 @@ export default function Career() {
               </div>
               <p className="py-6">{descriptions[career.path].shortDescription}</p>
 
-              <label htmlFor="my-modal-4" className="btn modal-button bg-sky-200 text-slate-800" onClick={() => {
+              <label htmlFor="my-modal-4" className="botondecarrera" onClick={() => {
                 setModalText({
                   career: career.name,
                   description: descriptions[career.path].longDescription

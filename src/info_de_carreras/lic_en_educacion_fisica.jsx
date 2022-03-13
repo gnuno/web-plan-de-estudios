@@ -1,7 +1,7 @@
 import { base, fullWidthNodeStyles, multiNodeBase } from "../components/atoms/initialElements/initial-elements";
 import { NodeLabel } from "../components/atoms/initialElements/initial-elements.utils";
 
-export const resumenDeCarreraEducacionFisica = { name: "Licenciatura en Educación Física", path: "/educacion_fisica", duration: "2 años", image: "http://uno.edu.ar/images/contenidos/lic-EF.jpg" };
+export const resumenDeCarreraEducacionFisica = { name: "Licenciatura en Educación Física", path: "/educacion_fisica", duration: "2 años", image: "https://i.imgur.com/UDpMHGP.jpeg" };
 
 export const descripcionDeCarreraEduFisica = {
   shortDescription: "El egresado contará con competencias para gestionar la organización y/o planificación de los recursos que provengan de la educación física y del deporte y tendrá capacidad para analizar de manera crítica las necesidades y problemáticas propias de su campo específico.",
