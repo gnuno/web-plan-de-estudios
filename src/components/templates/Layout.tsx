@@ -1,4 +1,4 @@
-import { NormalizeCSS } from "@mantine/core";
+import { ColorScheme, NormalizeCSS } from "@mantine/core";
 import { NotificationsProvider } from "@mantine/notifications";
 import React from "react";
 import { ModalContextProvider } from "@contexts/ModalContext";
@@ -9,11 +9,11 @@ import { UserContextProvider } from "@contexts/UserProvider";
 import BodyWrapper from "./BodyWrapper";
 
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout({ children,  colorScheme }: { children: React.ReactNode, colorScheme: ColorScheme }) {
 
     return (
         <UserContextProvider>
-            <ThemeContextProvider>
+            <ThemeContextProvider initialColorScheme={colorScheme}>
                 <NormalizeCSS />
                 <NotificationsProvider>
                     <SpotlighContextProvider>

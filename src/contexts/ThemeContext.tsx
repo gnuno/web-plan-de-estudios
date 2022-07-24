@@ -1,5 +1,6 @@
 import { ColorScheme, ColorSchemeProvider, GlobalStyles, MantineProvider, NormalizeCSS } from '@mantine/core';
 import { useColorScheme, useLocalStorageValue } from '@mantine/hooks';
+import { setCookie } from 'cookies-next';
 import React, { useContext, useState } from 'react'
 
 const Context = React.createContext<{
@@ -11,19 +12,23 @@ const Context = React.createContext<{
 });
 
 type ThemeContextProviderProps = {
-    children: React.ReactNode
+    children: React.ReactNode,
+    initialColorScheme: ColorScheme
 }
 
-export const ThemeContextProvider: React.FC<ThemeContextProviderProps> = ({ children }) => {
+export const ThemeContextProvider: React.FC<ThemeContextProviderProps> = ({ children, initialColorScheme }) => {
     const defaultColorScheme = useColorScheme();
-    const [colorScheme, setColorScheme] = useLocalStorageValue<ColorScheme>({
-        key: 'mantine-color-scheme',
-        defaultValue: defaultColorScheme,
-    });
+    const [colorScheme, setColorScheme] = useState(initialColorScheme);
+    // const [colorScheme, setColorScheme] = useLocalStorageValue<ColorScheme>({
+    //     key: 'mantine-color-scheme',
+    //     defaultValue: defaultColorScheme,
+    //     getInitialValueInEffect: true,
+    // });
     const toggleColorScheme = (value?: ColorScheme) => {
         console.log("AAA")
         const nextColorScheme = value || (colorScheme === 'dark' ? 'light' : 'dark');
         setColorScheme(nextColorScheme);
+        setCookie('mantine-color-scheme', nextColorScheme, { maxAge: 60 * 60 * 24 * 30 });
     };
 
     return <Context.Provider value={{ colorScheme, toggleColorScheme }}>
@@ -32,13 +37,15 @@ export const ThemeContextProvider: React.FC<ThemeContextProviderProps> = ({ chil
           withGlobalStyles
           withNormalizeCSS
           theme={{
-            /** Put your mantine theme override here */
+              /** Put your mantine theme override here */
+              fontFamily: 'Roboto',
+              headings: { fontFamily: 'Roboto' },
             colorScheme
           }}>
                 {children}
             </MantineProvider>
         </ColorSchemeProvider>
     </Context.Provider>
-}
+}  
 
 export const useTheme = () => useContext(Context);

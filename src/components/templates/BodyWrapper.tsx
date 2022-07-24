@@ -1,10 +1,11 @@
 import { AppShell, GlobalStyles, useMantineTheme } from "@mantine/core";
 import React from "react";
-import {Navbar as Sidebar} from "@organism/Navbar"
+import {Navbar} from "@organism/Navbar"
+import Sidebar from '@organism/Sidebar';
 
 export default function BodyWrapper({children}:{children: React.ReactNode}){
     const theme = useMantineTheme();
-
+    console.log(theme.colorScheme)
     return (<>
         <GlobalStyles theme={theme} />
             <AppShell
@@ -13,11 +14,8 @@ export default function BodyWrapper({children}:{children: React.ReactNode}){
 
                 navbar={<Sidebar />}
                 // footer={<Footer withNavbar />}
-                // header={<Navbar />}
+                header={<Navbar />}
 
-                styles={(theme) => ({
-                    main: { backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0], padding: 0, marginTop: 50 },
-                })}
             >
                 {children}
             </AppShell>

@@ -21,6 +21,7 @@
     "@mantine/rte": "^4.2.12",
     "@mantine/spotlight": "^4.2.12",
     "@next/bundle-analyzer": "^12.2.3",
+    "cookies-next": "^2.1.1",
     "dayjs": "^1.11.4",
     "next": "12.2.3",
     "react": "18.2.0",

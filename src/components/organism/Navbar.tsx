@@ -1,4 +1,4 @@
-import { ActionIcon, Avatar, Badge, Burger, Button, Container, Group, Header, MediaQuery, Title, UnstyledButton, useMantineColorScheme, useMantineTheme } from '@mantine/core';
+import { ActionIcon, Avatar, Badge, Burger, Button, Container, Group, Header, MediaQuery, Text, Title, UnstyledButton, useMantineColorScheme, useMantineTheme } from '@mantine/core';
 import { Sun, MoonStars } from 'tabler-icons-react';
 import { useModal, ModalType } from '@contexts/ModalContext';
 import SpotlightControl from '@molecules/Spotlight/SpotlightControl';
@@ -7,13 +7,16 @@ import { useUser } from '@contexts/UserProvider';
 import { useSidebar } from '@contexts/SidebarContext';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import { NextLink } from '@mantine/next';
+import MainLink from '@components/molecules/MainLink';
+import Link from 'next/link';
 
-function ToggleIcon({colorScheme}: {colorScheme:string}){
+function ToggleIcon({ colorScheme }: { colorScheme: string }) {
 
 
-    if(colorScheme == "dark"){
+    if (colorScheme == "dark") {
         return <Sun size={24} />
-    } 
+    }
     return <MoonStars size={24} />
 }
 
@@ -32,33 +35,43 @@ export const Navbar = () => {
 
 
     return (
-        <Header height={60} p="xs" >
+        <Header height={60} p="xs" sx={theme => ({
+            boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+            background: theme.colorScheme === "dark" ? theme.black[8] : "#EAEAEA"
+        })} >
             <Container size={'xl'} style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
                 <Group sx={{ height: '100%' }} px={20} position="apart">
                     <UnstyledButton onClick={() => router.push("/")}>
-                        <Title order={1}>Plan de Estudio</Title>
+                        <Title order={1}>PEI</Title>
                     </UnstyledButton>
 
-                    <MediaQuery smallerThan={"sm"} styles={{ display: 'none' }}>
+                    <MediaQuery smallerThan={"sm"} styles={{ display: 'none' }}><>
                         <Group position="center" align={"center"} >
                             <ActionIcon
                                 onClick={() => toggleColorScheme()}
                                 size="xl"
                                 sx={(theme) => ({
                                     backgroundColor:
-                                        theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
+                                        theme.colorScheme === 'dark' ? theme.colors.dark[6] : "#EAEAEA",
                                     color: theme.colorScheme === 'dark' ? theme.colors.yellow[4] : theme.colors.blue[6],
                                 })}
                             >
                                 <ToggleIcon colorScheme={colorScheme} />
                             </ActionIcon>
+                            <Link href="/micarrera">
+                                <Text px={20} weight={'lighter'} size={'sm'}>Mi carrera</Text>
+                            </Link>
+                            <Link href="/micarrera">
+                                <Text px={10} weight={'lighter'} size={'sm'}>Sobre nosotros</Text>
+                            </Link>
                         </Group>
+                    </>
                     </MediaQuery>
 
                 </Group>
-                <Group sx={{ height: '100%' }} px={20} position="center">
+                {/* <Group sx={{ height: '100%' }} px={20} position="center">
                     <SpotlightControl></SpotlightControl>
-                </Group>
+                </Group> */}
                 <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
                     <Burger
                         opened={showSidebar}
@@ -68,29 +81,18 @@ export const Navbar = () => {
                         mr="xl"
                     />
                 </MediaQuery>
-                {/* {jwt ? (<>
+                {jwt ? (<>
                     <MediaQuery smallerThan={"sm"} styles={{ display: 'none' }}>
                         <Group position="center" align={"center"} sx={{ height: "100%" }}>
-                            <Link to={"/profile/" + userId} style={{textDecoration: "none"}}>
-                                <Badge sx={{ paddingLeft: 0, height: "100%", cursor: "pointer" }} styles={{ leftSection: { height: "100%" } }} radius="xl" color="teal" leftSection={<Avatar
-                                    alt="Avatar for badge"
-                                    styles={{
-                                        root: {
-                                            height: "100%",
-                                        }
-                                    }}
-                                    mr={5}
-                                    src={(!avatar || avatar.length === 0) ? null : AvatarAdapter(avatar)}
-                                >
-                                    {username}
-                                </Avatar>}>
+                            <NextLink href={"/profile/" + userId} style={{ textDecoration: "none" }}>
+                                <Badge sx={{ paddingLeft: 0, height: "100%", cursor: "pointer" }} styles={{ leftSection: { height: "100%" } }} radius="xl" color="teal" >
                                     {username}
                                 </Badge>
-                            </Link>
+                            </NextLink>
                             <Button
                                 onClick={async () => {
-                                    setJWT(null, "", "", "");
-                                    await logout();
+                                    setSession(null, "", "", "");
+                                    // await logout();
                                 }}
                                 size="sm"
                                 color="blue"
@@ -112,7 +114,7 @@ export const Navbar = () => {
                     </MediaQuery>
                 </>
                 )
-                } */}
+                }
             </Container>
         </Header >
     )
