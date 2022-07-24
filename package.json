@@ -2,38 +2,37 @@
   "name": "web-plan-de-estudios",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-flow-renderer": "^9.6.6",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.2"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "dependencies": {
+    "@mantine/core": "^4.2.12",
+    "@mantine/dates": "^4.2.12",
+    "@mantine/dropzone": "^4.2.12",
+    "@mantine/form": "^4.2.12",
+    "@mantine/hooks": "^4.2.12",
+    "@mantine/modals": "^4.2.12",
+    "@mantine/next": "^4.2.12",
+    "@mantine/notifications": "^4.2.12",
+    "@mantine/prism": "^4.2.12",
+    "@mantine/rte": "^4.2.12",
+    "@mantine/spotlight": "^4.2.12",
+    "@next/bundle-analyzer": "^12.2.3",
+    "dayjs": "^1.11.4",
+    "next": "12.2.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tabler-icons-react": "^1.53.0"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "@types/node": "18.0.6",
+    "@types/react": "18.0.15",
+    "@types/react-dom": "18.0.6",
+    "eslint": "8.20.0",
+    "eslint-config-next": "12.2.3",
+    "typescript": "4.7.4"
   }
 }
