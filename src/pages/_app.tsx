@@ -15,18 +15,9 @@ export default function App(props: AppProps) {
       <title>Plan de Estudios Interactivo</title>
       <link rel='shortcut icon' href='/favicon.ico' type='image/ico' />
     </Head>
-    <MantineProvider
-        withGlobalStyles
-        withNormalizeCSS
-        theme={{
-          /** Put your mantine theme override here */
-          colorScheme: 'light',
-        }}
-        >
         <Layout>
         <Component {...pageProps} />
       </Layout>
-      </MantineProvider>
 
   </>)
 }

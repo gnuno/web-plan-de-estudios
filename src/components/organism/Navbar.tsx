@@ -6,7 +6,7 @@ import { useUser } from '@contexts/UserProvider';
 // import AvatarAdapter from '../../utils/adapters/AvatarAdapter';
 import { useSidebar } from '@contexts/SidebarContext';
 import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 function ToggleIcon({colorScheme}: {colorScheme:string}){
 
@@ -18,6 +18,8 @@ function ToggleIcon({colorScheme}: {colorScheme:string}){
 }
 
 export const Navbar = () => {
+    const [mounted, setMounted] = useState(false);
+
     const { colorScheme, toggleColorScheme } = useMantineColorScheme();
     const { showSidebar, setSidebar } = useSidebar();
     const router = useRouter();
@@ -25,9 +27,9 @@ export const Navbar = () => {
     const { modalType, setModalType } = useModal();
     const { jwt, username, avatar, setSession, userId } = useUser();
 
-    useEffect(() => {
+    useEffect(() => setMounted(true), []);
+    if (!mounted) return null;
 
-    }, [])
 
     return (
         <Header height={60} p="xs" >
@@ -48,13 +50,14 @@ export const Navbar = () => {
                                     color: theme.colorScheme === 'dark' ? theme.colors.yellow[4] : theme.colors.blue[6],
                                 })}
                             >
-                                {typeof window !== "undefined" &&  <ToggleIcon colorScheme={colorScheme} />}
+                                <ToggleIcon colorScheme={colorScheme} />
                             </ActionIcon>
                         </Group>
                     </MediaQuery>
 
                 </Group>
                 <Group sx={{ height: '100%' }} px={20} position="center">
+                    <SpotlightControl></SpotlightControl>
                 </Group>
                 <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
                     <Burger
@@ -65,10 +68,10 @@ export const Navbar = () => {
                         mr="xl"
                     />
                 </MediaQuery>
-                {jwt ? (<>
+                {/* {jwt ? (<>
                     <MediaQuery smallerThan={"sm"} styles={{ display: 'none' }}>
                         <Group position="center" align={"center"} sx={{ height: "100%" }}>
-                            {/* <Link to={"/profile/" + userId} style={{textDecoration: "none"}}>
+                            <Link to={"/profile/" + userId} style={{textDecoration: "none"}}>
                                 <Badge sx={{ paddingLeft: 0, height: "100%", cursor: "pointer" }} styles={{ leftSection: { height: "100%" } }} radius="xl" color="teal" leftSection={<Avatar
                                     alt="Avatar for badge"
                                     styles={{
@@ -83,10 +86,11 @@ export const Navbar = () => {
                                 </Avatar>}>
                                     {username}
                                 </Badge>
-                            </Link> */}
+                            </Link>
                             <Button
                                 onClick={async () => {
-                                    setSession(null, "", "", "");
+                                    setJWT(null, "", "", "");
+                                    await logout();
                                 }}
                                 size="sm"
                                 color="blue"
@@ -108,7 +112,7 @@ export const Navbar = () => {
                     </MediaQuery>
                 </>
                 )
-                }
+                } */}
             </Container>
         </Header >
     )

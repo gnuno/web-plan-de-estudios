@@ -33,7 +33,7 @@ export const ThemeContextProvider: React.FC<ThemeContextProviderProps> = ({ chil
           withNormalizeCSS
           theme={{
             /** Put your mantine theme override here */
-            colorScheme: 'light',
+            colorScheme
           }}>
                 {children}
             </MantineProvider>
