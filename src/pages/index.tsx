@@ -4,15 +4,13 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import HomeConnected from '@pages/HomeConnected'
 
 const Home: NextPage = () => {
 
   return (
     <>
-      <Link href={"/pepe"}>
-        <h1>Si</h1>
-      </Link>
-      <h1>Hola</h1>
+      <HomeConnected />
     </>
   )
 

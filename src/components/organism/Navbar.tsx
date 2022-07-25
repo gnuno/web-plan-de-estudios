@@ -53,7 +53,7 @@ export const Navbar = () => {
                                 sx={(theme) => ({
                                     backgroundColor:
                                         theme.colorScheme === 'dark' ? theme.colors.dark[6] : "#EAEAEA",
-                                    color: theme.colorScheme === 'dark' ? theme.colors.yellow[4] : theme.colors.blue[6],
+                                    color: theme.colorScheme === 'dark' ? theme.colors.yellow[4] : theme.colors.blue[6],    
                                 })}
                             >
                                 <ToggleIcon colorScheme={colorScheme} />
@@ -109,7 +109,7 @@ export const Navbar = () => {
                             <Button variant='outline' onClick={() => setModalType(ModalType.LOGIN)}>
                                 Conectarse
                             </Button>
-                            <Button variant="gradient" onClick={() => setModalType(ModalType.SIGNUP)} gradient={{ from: 'indigo', to: 'cyan' }}>Registrarse</Button>
+                            <Button variant="gradient" onClick={() => setModalType(ModalType.SIGNUP)} gradient={{ from: '#A5537F', to: '#5845A5' }}>Registrarse</Button>
                         </Group>
                     </MediaQuery>
                 </>
